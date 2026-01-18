@@ -1,20 +1,40 @@
 {
-  "target_root": "E:/ai_cache",
+  "target_root": "D:/ai_cache",
   "items": {
     "huggingface": {
+      "type": "env",
       "env": ["HF_HOME", "HUGGINGFACE_HUB_CACHE"],
       "src": "%USERPROFILE%/.cache/huggingface",
       "dst": "huggingface"
     },
     "modelscope": {
+      "type": "env",
       "env": ["MODELSCOPE_CACHE"],
       "src": "%USERPROFILE%/.cache/modelscope",
       "dst": "modelscope"
     },
     "torch": {
+      "type": "env",
       "env": ["TORCH_HOME"],
       "src": "%USERPROFILE%/.cache/torch",
       "dst": "torch"
+    },
+    "whisper": {
+      "type": "symlink",
+      "src": "%USERPROFILE%/.cache/whisper",
+      "dst": "whisper"
+    },
+    "pip": {
+      "type": "env",
+      "env": ["PIP_CACHE_DIR"],
+      "src": "%USERPROFILE%/.cache/pip",
+      "dst": "pip"
+    },
+    "conda": {
+      "type": "env",
+      "env": ["CONDA_PKGS_DIRS"],
+      "src": "%USERPROFILE%/.conda/pkgs",
+      "dst": "conda"
     }
   }
 }
